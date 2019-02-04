@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Contact App
+		</ion-title>
+		<ion-buttons right>
+			<button ion-button (click)="onGotoSearchPage()">
+				<ion-icon name="search" style="font-size: 25px;"></ion-icon>
+			</button>
+		</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item-sliding *ngFor="let contact of contacts">
+			<ion-item>
+				<ion-thumbnail item-start>
+					<img src="assets/imgs/21.png"/>
+				</ion-thumbnail>
+				<h2>{{contact.full_name}}</h2>
+				<p>{{contact.address}}</p>
+			</ion-item>
+			<ion-item-options>
+				<button ion-button color="primary" (click)="GoDetailContact(contact)"><ion-icon name="list-box"></ion-icon>Detail</button>
+				<button ion-button color="secondary" (click)="onCallNumber(contact.phone)"><ion-icon name="call"></ion-icon>Call</button>
+			</ion-item-options>
+		</ion-item-sliding>
+	</ion-list>
+</ion-content>
+
+	<ion-footer padding no-border>
+		<button block ion-button (click)="onGotoAddContact()">Add Contact</button>
+	</ion-footer>
+
+ 
+

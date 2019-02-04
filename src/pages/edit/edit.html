@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>
+        Edit Contact
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>Full Name</ion-label>
+    <ion-input type="text" [(ngModel)]="contacts.full_name"></ion-input>
+  </ion-item>
+  
+
+  <ion-item>
+    <ion-label floating>Address</ion-label>
+    <ion-input type="text" [(ngModel)]="contacts.address"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Phone</ion-label>
+    <ion-input type="tel" [(ngModel)]="contacts.phone"></ion-input>
+  </ion-item> 
+
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="contacts.email"></ion-input>
+  </ion-item>     
+</ion-content>
+
+<ion-footer padding no-border>
+  <button ion-button block color="primary" (click)="onUpdate()">Save Contact</button>
+</ion-footer>
